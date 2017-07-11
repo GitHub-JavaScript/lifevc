@@ -21,7 +21,8 @@
           </ul>
         </div>
     </div>
-    <div class="wrap">
+    <scroller>
+       <div class="wrap">
       <div class="banner">
         <mt-swipe :auto="4000" class="ul">
           <mt-swipe-item class="li">
@@ -128,6 +129,7 @@
         <img src="../img/Home/remaijignxuan12.jpg" alt="">
       </div>
     </div>
+    </scroller>
   </div>
 </template>
 
@@ -198,6 +200,7 @@
             color #333
   .wrap
     padding-top 96px
+    padding-bottom 50px
     .banner
       width 100%
       height 250px

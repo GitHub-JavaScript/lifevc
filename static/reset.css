@@ -82,7 +82,8 @@ li {
 
 html, body {
   width: 100%;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
+  overflow: hidden;
   height: 100%;
 }
 

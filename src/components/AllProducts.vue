@@ -15,7 +15,8 @@
         </form>
       </div>
     </div>
-    <div class="pro-wrap">
+    <scroller>
+      <div class="pro-wrap">
       <div data-v-e8e06e10="" class="life-goodsBox"><!---->
         <div data-v-e8e06e10="" class="life-goodsTip">
           <dl data-v-e8e06e10="" class="life-goodsMark">家务</dl> <!----></div>
@@ -364,6 +365,8 @@
         </ul>
       </div>
     </div>
+      <div>&nbsp;</div>
+    </scroller>
   </div>
 </template>
 
@@ -438,6 +441,7 @@
   .pro-wrap
     background #F2F2F2
     padding-top 100px
+    margin-bottom 40px
     .life-goodsBox
       margin-top: 2rem;
       .life-goodsTip

@@ -5,7 +5,8 @@
         <p class="header-title">闲逛</p>
       </div>
     </div>
-    <div class="str-wrap clearFix" style="background: white;">
+    <scroller>
+      <div class="str-wrap" style="background: white;">
       <div class="stroll-all-item">
         <div class="stroll-item">
           <div class="stroll-type-item">
@@ -963,6 +964,7 @@
         </div>
       </div>
     </div>
+    </scroller>
   </div>
 </template>
 
@@ -995,6 +997,7 @@
 
   .str-wrap
     padding-top 48px
+    padding-bottom 50px
     background: white
     overflow hidden
     .stroll-all-item
