@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="shop-header">
+    <div class="user-header">
       <div class="header-content">
         <p class="header-title">账户中心</p>
         <a href="#/setting">
@@ -8,7 +8,8 @@
         </a>
       </div>
     </div>
-    <div class="shop-wrap">
+    <scroller>
+      <div class="user-wrap">
       <div class="acct-user-wrap">
         <div class="acct-nolog">
           <span class="state">您还未登录</span>
@@ -104,6 +105,8 @@
         </ul>
       </div>
     </div>
+      <div>&nbsp;</div>
+    </scroller>
   </div>
 </template>
 
@@ -113,7 +116,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .shop-header
+  .user-header
     padding: 0;
     width: 100%;
     background: #89be48;
@@ -147,11 +150,12 @@
           top: 0;
           z-index: 9;
 
-  .shop-wrap
+  .user-wrap
     width: 100%;
     margin: 0 auto;
     margin-top: 4rem;
-    padding-bottom: 4.5rem;
+    //padding-bottom: 4.5rem;
+    margin-bottom 7.5rem;
     color: #2e2e2e;
     background #f2f2f2
     .acct-user-wrap
@@ -230,16 +234,16 @@
             background-size: 99% 120%;
           span#ico1
             background-position: -5px -7px;
-            background-image: url('../img/ShoppingCart/daizhifu.png');
+            background-image: url('../img/UserCenter/daizhifu.png');
           span#ico2
             background-position: 2px -7px;
-            background-image: url('../img/ShoppingCart/daifahuo.png');
+            background-image: url('../img/UserCenter/daifahuo.png');
           span#ico3
             display: inline-block;
             height: 3rem;
             width: 3.7rem;
             background-position: -2px -7px;
-            background-image: url('../img/ShoppingCart/daishouhuo.png');
+            background-image: url('../img/UserCenter/daishouhuo.png');
             background-repeat: no-repeat;
             background-size: 99% 120%;
           span#ico4, span#ico5
@@ -250,16 +254,16 @@
             background-size: 99% 120%;
           span#ico4
             background-position: -6px -7px;
-            background-image: url('../img/ShoppingCart/daipinglun.png');
+            background-image: url('../img/UserCenter/daipinglun.png');
           span#ico5
             background-position: -6px -4px;
-            background-image: url('../img/ShoppingCart/huifu.png');
+            background-image: url('../img/UserCenter/huifu.png');
           span#ico6
             display: inline-block;
             height: 3rem;
             width: 3.5rem;
             background-position: -6px -7px;
-            background-image: url('../img/ShoppingCart/daituihuo.png');
+            background-image: url('../img/UserCenter/daituihuo.png');
             background-repeat: no-repeat;
             background-size: 99% 120%;
 

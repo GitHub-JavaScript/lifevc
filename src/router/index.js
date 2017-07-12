@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 import Home from  '../components/Home.vue'
 import AllProducts from  '../components/AllProducts.vue'
 import Stroll from  '../components/Stroll.vue'
@@ -8,19 +7,20 @@ import ShoppingCart from  '../components/ShoppingCart.vue'
 import UserCenter from  '../components/UserCenter.vue'
 import Login from  '../components/Login.vue'
 import Register from  '../components/Register.vue'
-
-
+import ProductsDetails from '../components/ProductsDetails.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  linkActiveClass :'selected',
+  linkActiveClass :'active',
+
   routes: [
-    {
-      path: '/',
-      component: Home
-      // redircet:'/Home'
-    },
+    { path: "/", redirect: '/Home' },
+    // {
+    //   path: '/Home',
+    //   component: Home
+    // },
+
     {
       path: '/Home',
       component: Home
@@ -28,6 +28,10 @@ export default new Router({
     {
       path: '/AllProducts',
       component: AllProducts
+    },
+    {
+      path: '/ProductsDetails',
+      component: ProductsDetails
     },
     {
       path: '/Stroll',

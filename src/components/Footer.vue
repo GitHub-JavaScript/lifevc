@@ -1,9 +1,8 @@
 <template>
   <div class="footer">
-
     <ul id="footermenuNav" class="footermenuNav">
       <li>
-        <router-link to="/Home">
+        <router-link to="/Home" >
           <div><i class="icon iconfont icon-shouye"></i></div>
           <span class="lispan">首页</span>
         </router-link>
@@ -73,7 +72,8 @@
           font-size 1.1rem
           .icon
            font-size 2.2rem
-        .selected
+           color :none
+        .active
           color: #009c42
 
 

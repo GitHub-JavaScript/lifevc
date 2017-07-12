@@ -1,153 +1,189 @@
 <template>
   <div>
     <div class="header">
-        <div class="bgc">
-          <div class="head-logo">
+      <div class="bgc">
+        <div class="head-logo">
+          <router-link to="/AllProducts">
             <div class="search"></div>
-          </div>
+          </router-link>
         </div>
-        <div id="head-menu" class="head-menu">
-          <ul id="navUL" class="menuNavNewProduct" style="width: 800px;">
-            <li class="selected"><a>首页</a></li><!--
-            --><li class=""><a>新品</a></li><!--
-            --><li class=""><a>家务</a></li><!--
-            --><li class=""><a>下厨</a></li><!--
-            --><li class=""><a>家居服</a></li><!--
-            --><li class=""><a>生活</a></li><!--
-            --><li class=""><a>软装</a></li><!--
-            --><li class=""><a>床品</a></li><!--
-            --><li class=""><a>工作和旅行</a></li><!--
-            --><li class=""><a>了解LifeVC</a></li>
-          </ul>
-        </div>
+      </div>
+      <div class="head-menu" ref="menu">
+        <ul id="navUL" class="menuNavNewProduct" style="width: 800px;">
+          <li class="selected"><a>首页</a></li><!--
+            -->
+          <li class=""><a>新品</a></li><!--
+            -->
+          <li class=""><a>家务</a></li><!--
+            -->
+          <li class=""><a>下厨</a></li><!--
+            -->
+          <li class=""><a>家居服</a></li><!--
+            -->
+          <li class=""><a>生活</a></li><!--
+            -->
+          <li class=""><a>软装</a></li><!--
+            -->
+          <li class=""><a>床品</a></li><!--
+            -->
+          <li class=""><a>工作和旅行</a></li><!--
+            -->
+          <li class=""><a>了解LifeVC</a></li>
+        </ul>
+      </div>
     </div>
     <scroller>
-       <div class="wrap">
-      <div class="banner">
-        <mt-swipe :auto="4000" class="ul">
-          <mt-swipe-item class="li">
-            <a href="#"><img src="../img/Home/banner1.jpg" alt=""></a>
-          </mt-swipe-item>
-          <mt-swipe-item class="li">
-            <a href="#"><img src="../img/Home/banner2.jpg" alt=""></a>
-          </mt-swipe-item>
-          <mt-swipe-item class="li">
-            <a href="#"><img src="../img/Home/banner3.jpg" alt=""></a>
-          </mt-swipe-item>
-          <mt-swipe-item class="li">
-            <a href="#"><img src="../img/Home/banner4.jpg" alt=""></a>
-          </mt-swipe-item> <mt-swipe-item class="li">
-          <img src="../img/Home/banner5.jpg" alt="">
-        </mt-swipe-item>
-          <mt-swipe-item class="li">
-            <a href="#"><img src="../img/Home/banner6.jpg" alt=""></a>
-          </mt-swipe-item>
-          <mt-swipe-item class="li">
-            <a href="#"><img src="../img/Home/banner7.jpg" alt=""></a>
-          </mt-swipe-item>
-          <mt-swipe-item class="li">
-            <a href="#"><img src="../img/Home/banner8.jpg" alt=""></a>
-          </mt-swipe-item>
-        </mt-swipe>
+      <div class="wrap">
+        <div class="banner">
+          <mt-swipe :auto="4000" class="ul">
+            <mt-swipe-item class="li">
+              <a href="#"><img src="../img/Home/banner1.jpg" alt=""></a>
+            </mt-swipe-item>
+            <mt-swipe-item class="li">
+              <a href="http://localhost:8080/#/ProductsDetails"><img src="../img/Home/banner2.jpg" alt=""></a>
+            </mt-swipe-item>
+            <mt-swipe-item class="li">
+              <a href="#"><img src="../img/Home/banner3.jpg" alt=""></a>
+            </mt-swipe-item>
+            <mt-swipe-item class="li">
+              <a href="#"><img src="../img/Home/banner4.jpg" alt=""></a>
+            </mt-swipe-item>
+            <mt-swipe-item class="li">
+              <img src="../img/Home/banner5.jpg" alt="">
+            </mt-swipe-item>
+            <mt-swipe-item class="li">
+              <a href="#"><img src="../img/Home/banner6.jpg" alt=""></a>
+            </mt-swipe-item>
+            <mt-swipe-item class="li">
+              <a href="#"><img src="../img/Home/banner7.jpg" alt=""></a>
+            </mt-swipe-item>
+            <mt-swipe-item class="li">
+              <a href="#"><img src="../img/Home/banner8.jpg" alt=""></a>
+            </mt-swipe-item>
+          </mt-swipe>
+        </div>
+        <ul v-if="list">
+          <li v-for="item in list" class="img-wrap">
+            <a href="">
+              <img v-lazy="item.local">
+            </a>
+          </li>
+        </ul>
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/huodongimg.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/xinpinshoufa.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/jifenhuangou.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/laohuiyuanbuhuo.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/48baonian.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/jiawu.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/xiachu.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/chuangping.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/jiajufu.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/shenghuo.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/gongzuohelvxing.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/zhazhiji.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/chuengnuo6nian.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/repinjinxuan.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/repinjingxuan1.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijingxuan2.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijingxuan3.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijingxuan4.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijingxuan5.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijignxuan6.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijingxuan7.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijignxuan8.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijingxuan9.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/424remaijingxuan10.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijingxuan11.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="../img/Home/remaijignxuan12.jpg" alt="">-->
+        <!--</div>-->
       </div>
-      <div class="img-wrap">
-        <img src="../img/Home/huodongimg.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/xinpinshoufa.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/jifenhuangou.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/laohuiyuanbuhuo.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/48baonian.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/jiawu.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/xiachu.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/chuangping.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/jiajufu.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/shenghuo.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/gongzuohelvxing.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/zhazhiji.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/chuengnuo6nian.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/repinjinxuan.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/repinjingxuan1.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijingxuan2.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijingxuan3.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijingxuan4.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijingxuan5.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijignxuan6.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijingxuan7.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijignxuan8.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijingxuan9.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/424remaijingxuan10.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijingxuan11.jpg" alt="">
-      </div>
-      <div class="img-wrap">
-        <img src="../img/Home/remaijignxuan12.jpg" alt="">
-      </div>
-    </div>
     </scroller>
   </div>
 </template>
 
 <script>
-  import { Swipe, SwipeItem } from 'mint-ui'
+  import {Swipe, SwipeItem, Lazyload} from 'mint-ui'
   import BScroll from 'better-scroll'
-
-
+  import Vue from 'vue'
+  import axios from 'axios'
+  //  Vue.use(Lazyload)
   export default {
-   created(){
-      this.$nextTick(()=>{
-        let scroll = new BScroll(document.getElementById('head-menu'), {
-            scrollX:true,
-            //probeType: 3
-            }
-            )
+    data () {
+      return {
+        list: []
+      }
+    },
+    created(){
+      axios.get('/api/homeImg').then((response) => {
+        const result = response.data
+        if (result.code === "OK") {
+          this.list = result.data
+          console.log(this.list[0].local)
+        }
       })
-   }
+      this.$nextTick(() => {
+        if (!this.scroll) {
+          this.scroll = new BScroll(this.$refs.menu, {
+            scrollX: true,
+            //probeType: 3
+          })
+        }
+        else {
+          this.scroll.refresh()
+        }
+      })
+    }
   }
 </script>
 
@@ -187,28 +223,29 @@
       overflow: hidden
       z-index: 1
       .menuNavNewProduct
-         height: 48px
-         overflow: hidden
-         font-size 1.35rem
-         box-sizing: border-box
-         position: relative
-         z-index: 1
+        height: 48px
+        overflow: hidden
+        font-size 1.35rem
+        box-sizing: border-box
+        position: relative
+        z-index: 1
 
-         line-height: 48px
-         .selected
-           border-bottom  1px solid greenyellow
-           a
+        line-height: 48px
+        .selected
+          border-bottom 1px solid greenyellow
+          a
             color #80b532
-         li
-           display: inline-block
-           text-align: center
-           width: 80px
-           height 48px
-           overflow: hidden
-           right :0 !important
-           border-bottom  1px solid #ddd
-           a
+        li
+          display: inline-block
+          text-align: center
+          width: 80px
+          height 48px
+          overflow: hidden
+          right: 0 !important
+          border-bottom 1px solid #ddd
+          a
             color #333
+
   .wrap
     padding-top 96px
     padding-bottom 50px
@@ -233,6 +270,8 @@
             height 101%
     .img-wrap
       width 100%
+      img[lazy=loading]
+        width 100%
       img
-        width  100%
+        width 100%
 </style>

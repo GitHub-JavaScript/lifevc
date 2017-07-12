@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div style="position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: 99; background: white">
     <div class="str-header">
       <div class="header-content">
         <p class="header-title">闲逛</p>
       </div>
     </div>
     <scroller>
-      <div class="str-wrap" style="background: white;">
+      <div class="str-wrap">
       <div class="stroll-all-item">
         <div class="stroll-item">
           <div class="stroll-type-item">
@@ -998,7 +998,7 @@
   .str-wrap
     padding-top 48px
     padding-bottom 50px
-    background: white
+    /*background: white*/
     overflow hidden
     .stroll-all-item
       width: 50%;

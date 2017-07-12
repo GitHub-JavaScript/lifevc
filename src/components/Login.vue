@@ -1,10 +1,12 @@
 <template>
   <div>
     <div class="loginBg">
-      <div class="old_user_login" onclick="history.back()">
-        <label class="acct_top_back"><</label>
-        <img src="../img/Login/Login.png" class="acct_top_show">
-      </div>
+      <router-link to="/UserCenter">
+        <div class="old_user_login">
+          <label class="acct_top_back"><</label>
+          <img src="../img/Login/Login.png" class="acct_top_show">
+        </div>
+      </router-link>
       <div  class="bg-wrap" style="height: 526px;">
         <div  class="login_content"><h1 >老用户登录</h1>
           <div  id="wrap">

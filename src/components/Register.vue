@@ -1,10 +1,12 @@
 <template>
   <div>
     <div class="RegisterBg">
-      <div class="old_user_register" onclick="history.back()">
-        <label class="acct_top_back"><</label>
-        <img src="../img/Login/Login.png" class="acct_top_show">
-      </div>
+      <router-link to="/UserCenter">
+        <div class="old_user_register">
+          <label class="acct_top_back"><</label>
+          <img src="../img/Login/Login.png" class="acct_top_show">
+        </div>
+      </router-link>
       <div class="bg-wrap1" style="height: 526px;">
         <div class="login_content">
           <h1>新用户注册</h1>
@@ -47,6 +49,10 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+  input::-ms-input-placeholder
+    text-align: left
+  input::-webkit-input-placeholder
+    text-align: left
   .RegisterBg
     z-index 999
     margin-top: 0px;
@@ -128,7 +134,7 @@
               text-decoration: none;
               border: 1px solid #3aad36;
               border-radius: 4px;
-              padding: 4px 15px;
+              padding: 6px 6px;
               text-align: center;
               position: absolute;
               right: 0;
