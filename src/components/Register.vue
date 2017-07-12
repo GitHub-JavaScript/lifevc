@@ -31,10 +31,10 @@
                   class="fidld_skip">获取验证码</a></li>
               </ul>
               <p>遇到问题？请
-                <a href="tel:400-609-2288">联系客服</a></p> <input type="button"
-                                                               value="注册"
-                                                               class="btn_login space m-top"> <input
-              type="button" value="登录" class="btn_regisiter space m-top"></form>
+                <a href="tel:400-609-2288">联系客服</a></p>
+              <input type="button" value="注册" class="btn_login space m-top">
+              <router-link to="/Login"><input type="button" value="登录" class="btn_regisiter space m-top"></router-link>
+            </form>
           </div>
         </div>
       </div>

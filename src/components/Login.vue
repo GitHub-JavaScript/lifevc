@@ -25,20 +25,25 @@
             <div >
               <form  id="login-form">
                 <ul  class="fm_list">
-                  <li ><input  type="tel" maxlength="11" placeholder="请输入手机号"
-                                                required="required" class="field_ipt"></li>
-                  <li  class="multi"><input  type="password" maxlength="20"
-                                                              placeholder="请输入登录密码" required="required"
-                                                              class="field_ipt"> <a
-                                                                                    class="fidld_skip">忘记密码</a></li>
+                  <li >
+                    <input  type="tel" maxlength="11" placeholder="请输入手机号" required="required" class="field_ipt">
+                  </li>
+                  <li  class="multi">
+                    <input  type="password" maxlength="20" placeholder="请输入登录密码" required="required" class="field_ipt">
+                    <a class="fidld_skip">忘记密码</a>
+                  </li>
                 </ul>
-                <div  id="setting" class="set_link"><a  href="javascript:;"><span
-                  >手机号快捷登录></span> <b ></b></a></div>
+                <div  id="setting" class="set_link">
+                  <a  href="javascript:;">
+                    <span>手机号快捷登录></span>
+                    <b ></b>
+                  </a>
+                </div>
               </form>
             </div>
-            <input  type="button" value="登录" class="btn_login"> <input
-                                                                                         type="button" value="注册"
-                                                                                         class="btn_regisiter"></div>
+            <input  type="button" value="登录" class="btn_login">
+            <router-link to="/Register"><input type="button" value="注册" class="btn_regisiter"></router-link>
+          </div>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@
             <div class="search"></div>
           </div>
         </div>
-        <div class="head-menu">
+        <div id="head-menu" class="head-menu">
           <ul id="navUL" class="menuNavNewProduct" style="width: 800px;">
             <li class="selected"><a>首页</a></li><!--
             --><li class=""><a>新品</a></li><!--
@@ -134,9 +134,20 @@
 </template>
 
 <script>
-  import { Swipe, SwipeItem } from 'mint-ui';
-  export default {
+  import { Swipe, SwipeItem } from 'mint-ui'
+  import BScroll from 'better-scroll'
 
+
+  export default {
+   created(){
+      this.$nextTick(()=>{
+        let scroll = new BScroll(document.getElementById('head-menu'), {
+            scrollX:true,
+            //probeType: 3
+            }
+            )
+      })
+   }
   }
 </script>
 
